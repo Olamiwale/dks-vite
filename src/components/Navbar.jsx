@@ -17,7 +17,7 @@ export default function Navbar() {
           </div>
         </a>
 
-        <div className="hidden gap-8 md:flex">
+        {/* <div className="hidden gap-8 md:flex">
           <a href="/about" className="text-slate-300 hover:text-white">
             About
           </a>
@@ -27,10 +27,10 @@ export default function Navbar() {
           <a href="/contact" className="text-slate-300 hover:text-white">
             Contact
           </a>
-        </div>
+        </div> */}
 
         <a
-          href="/contact"
+          href="#contact"
           className="rounded-md bg-blue-600 px-5 py-2 text-white hover:bg-blue-700"
         >
           Get In Touch
