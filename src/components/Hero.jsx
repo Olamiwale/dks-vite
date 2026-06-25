@@ -60,3 +60,7 @@ export default function Hero() {
     </section>
   );
 }
+
+
+
+/*Yellow / Gold: Used for the crane hook block, the hoisting slings, and the large "DKS" letters.Maroon / Dark Red: Used for the horizontal rectangular banner, the outline details on the crane hook, and the "NIG. LTD." text.White: Used for the bold "KRANES"  */

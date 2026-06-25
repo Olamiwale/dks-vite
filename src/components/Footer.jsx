@@ -58,8 +58,8 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-2">
-              <li>info@dkskranes.com.ng</li>
-              <li>+234 000 000 0000</li>
+              <li>info.dkskranesng@gmail.com</li>
+              <li>+234 802 4983 235</li>
               <li>Nigeria</li>
             </ul>
           </div>

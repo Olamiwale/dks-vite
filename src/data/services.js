@@ -1,19 +1,15 @@
 export const services = [
   {
     icon: '📦',
-    title: 'Import & Export',
+    title: 'Hiring and Lease of Heavy Duty Machines',
     description: 'Global trade solutions connecting Nigeria to the world.',
   },
   {
     icon: '🚚',
-    title: 'Logistics',
+    title: 'Transportation services',
     description: 'Efficient supply chain and delivery services.',
   },
-  {
-    icon: '🏪',
-    title: 'Retail',
-    description: 'Comprehensive retail business solutions.',
-  },
+ 
   {
     icon: '🖨️',
     title: 'Printing',
@@ -21,12 +17,13 @@ export const services = [
   },
   {
     icon: '💼',
-    title: 'Trading',
+    title: 'Logistic & Haulage Solutions',
     description: 'Strategic business trading partnerships.',
   },
   {
     icon: '💰',
-    title: 'Investment Facilitation',
+    title: 'Human Labor Services',
     description: 'Investment opportunities and financial solutions.',
   },
 ];
+

@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <span className="text-sm uppercase tracking-widest text-amber-500">
+            <span className="text-sm uppercase tracking-widest text-amber-400">
               Why Choose Us
             </span>
 

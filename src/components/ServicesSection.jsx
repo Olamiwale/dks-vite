@@ -6,7 +6,7 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-7xl px-6">
 
         <div className="mb-12">
-          <span className="text-sm uppercase tracking-[0.3em] text-blue-600">
+          <span className="text-sm uppercase tracking-[0.3em] text-amber-400">
             Services
           </span>
 
