@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400">
+    <footer className="bg-yellow-400 text-slate-400">
       <div className="mx-auto max-w-7xl px-6 py-16">
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
@@ -12,7 +12,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-white">
+                <h3 className="font-semibold text-red-900">
                   DKS Kranes Nigeria Limited
                 </h3>
                 <p className="text-xs text-slate-500">
@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <p>
+            <p className="text-red-900">
               A diversified Nigerian enterprise delivering trusted
               commercial, logistics, retail and investment services.
             </p>
@@ -32,7 +32,7 @@ export default function Footer() {
               Services
             </h4>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-red-900">
               <li>General Contracts</li>
               <li>Trading & Merchandise</li>
               <li>Imports & Exports</li>
@@ -45,7 +45,7 @@ export default function Footer() {
               Company
             </h4>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-red-900">
               <li>About Us</li>
               <li>Why Choose Us</li>
               <li>Contact</li>
@@ -53,11 +53,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold text-white">
+            <h4 className="mb-4 font-semibold text-red-900">
               Contact
             </h4>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-red-900">
               <li>info.dkskranesng@gmail.com</li>
               <li>+234 802 4983 235</li>
               <li>Nigeria</li>
@@ -65,8 +65,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-slate-800 pt-8 text-center">
-          © 2025 DKS Kranes Nigeria Limited. All rights reserved.
+        <div className="mt-12 border-t border-slate-800 pt-8 text-red-900 text-center">
+          © 2026 DKS Kranes Nigeria Limited. All rights reserved.
         </div>
       </div>
     </footer>

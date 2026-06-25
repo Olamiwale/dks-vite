@@ -27,19 +27,19 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="bg-slate-900 py-24 text-white">
+    <section className="bg-yellow-400 py-24 text-white">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <span className="text-sm uppercase tracking-widest text-amber-400">
+            <span className="text-sm uppercase tracking-widest text-red-900">
               Why Choose Us
             </span>
 
-            <h2 className="mt-4 text-4xl font-bold">
+            <h2 className="mt-4 text-4xl text-red-900 font-bold">
               One Partner. Total Business Coverage.
             </h2>
 
-            <p className="mt-6 text-slate-300">
+            <p className="mt-6 text-red-900">
               In a complex market like Nigeria, working with a single,
               versatile partner reduces friction, cost and risk.
             </p>
