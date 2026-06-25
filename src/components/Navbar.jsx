@@ -3,8 +3,8 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-slate-900/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500 font-bold text-slate-900">
-            DKS
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg font-bold text-slate-900">
+            <img src="../logo1.png" />
           </div>
 
           <div>

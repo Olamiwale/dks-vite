@@ -7,6 +7,20 @@ export default function AboutSection() {
           DKS Kranes Nigeria Limited is a leading business solutions provider with expertise
           in trading, logistics, imports & exports, retail, printing and investment facilitation.
         </p>
+      <div className="grid gap-6 md:grid-cols-2">
+  <img
+    src="/image02.png"
+    alt="Logistics"
+    className="h-72 w-full rounded-xl object-cover shadow-lg"
+  />
+
+  <img
+    src="/image03.png"
+    alt="Business Operations"
+    className="h-72 w-full rounded-xl object-cover shadow-lg"
+  />
+</div>
+        
       </div>
     </section>
   );

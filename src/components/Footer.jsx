@@ -7,8 +7,8 @@ export default function Footer() {
 
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded bg-amber-500 font-bold text-slate-900">
-                DKS
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded font-bold text-slate-900">
+                 <img src="../logo1.png" />
               </div>
 
               <div>
