@@ -27,12 +27,13 @@ export default function ContactSection() {
 
               <div>
                 <p className="font-semibold">📧 Email</p>
-                <p>info@dkskranes.com.ng</p>
+                <li>info.dkskranesng@gmail.com</li>
+             
               </div>
 
               <div>
                 <p className="font-semibold">📞 Phone</p>
-                <p>+234 000 000 0000</p>
+                <li>+234 802 4983 235</li>
               </div>
 
               <div>
