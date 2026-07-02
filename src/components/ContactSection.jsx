@@ -1,59 +1,4 @@
-"use client";
-
-import { useState } from "react";
-
 export default function ContactSection() {
-  const [loading, setLoading] = useState(false);
-
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    service: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    setLoading(true);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      alert(data.message);
-
-      if (data.success) {
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          service: "",
-          message: "",
-        });
-      }
-    } catch (error) {
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <section id="contact" className="scroll-mt-24 bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6">
@@ -68,7 +13,8 @@ export default function ContactSection() {
             </h2>
 
             <p className="mt-4 text-slate-600">
-              Reach out to discuss a contract, request a quote, or explore a partnership opportunity.
+              Reach out to discuss a contract, request a quote,
+              or explore a partnership opportunity.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -95,16 +41,28 @@ export default function ContactSection() {
           </div>
 
           <form
-            onSubmit={handleSubmit}
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             className="space-y-4 rounded-2xl bg-white p-8 shadow"
           >
+            {/* Required by Netlify */}
+            <input type="hidden" name="form-name" value="contact" />
+
+            {/* Honeypot field */}
+            <p hidden>
+              <label>
+                Don't fill this out:
+                <input name="bot-field" />
+              </label>
+            </p>
+
             <div className="grid gap-4 md:grid-cols-2">
               <input
                 name="name"
                 type="text"
                 placeholder="Full Name"
-                value={formData.name}
-                onChange={handleChange}
                 required
                 className="rounded-lg border p-3"
               />
@@ -113,8 +71,6 @@ export default function ContactSection() {
                 name="phone"
                 type="tel"
                 placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
                 required
                 className="rounded-lg border p-3"
               />
@@ -124,16 +80,12 @@ export default function ContactSection() {
               name="email"
               type="email"
               placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
               required
               className="w-full rounded-lg border p-3"
             />
 
             <select
               name="service"
-              value={formData.service}
-              onChange={handleChange}
               required
               className="w-full rounded-lg border p-3"
             >
@@ -153,18 +105,15 @@ export default function ContactSection() {
               name="message"
               rows={5}
               placeholder="Tell us about your requirement..."
-              value={formData.message}
-              onChange={handleChange}
               required
               className="w-full rounded-lg border p-3"
             />
 
             <button
               type="submit"
-              disabled={loading}
-              className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+              className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
             >
-              {loading ? "Sending..." : "Send Enquiry"}
+              Send Enquiry
             </button>
           </form>
         </div>
@@ -173,13 +122,68 @@ export default function ContactSection() {
   );
 }
 
+
+
+// "use client";
+
+// import { useState } from "react";
+
 // export default function ContactSection() {
+//   const [loading, setLoading] = useState(false);
+
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     phone: "",
+//     email: "",
+//     service: "",
+//     message: "",
+//   });
+
+//   const handleChange = (e) => {
+//     setFormData((prev) => ({
+//       ...prev,
+//       [e.target.name]: e.target.value,
+//     }));
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     setLoading(true);
+
+//     try {
+//       const response = await fetch("../api/contact", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(formData),
+//       });
+
+//       const data = await response.json();
+
+//       alert(data.message);
+
+//       if (data.success) {
+//         setFormData({
+//           name: "",
+//           phone: "",
+//           email: "",
+//           service: "",
+//           message: "",
+//         });
+//       }
+//     } catch (error) {
+//       alert("Something went wrong. Please try again.");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
 //   return (
 //     <section id="contact" className="scroll-mt-24 bg-slate-50 py-24">
 //       <div className="mx-auto max-w-7xl px-6">
-
 //         <div className="grid gap-12 lg:grid-cols-2">
-
 //           <div>
 //             <span className="text-sm uppercase tracking-widest text-blue-600">
 //               Contact Us
@@ -190,8 +194,7 @@ export default function ContactSection() {
 //             </h2>
 
 //             <p className="mt-4 text-slate-600">
-//               Reach out to discuss a contract, request a quote,
-//               or explore a partnership opportunity.
+//               Reach out to discuss a contract, request a quote, or explore a partnership opportunity.
 //             </p>
 
 //             <div className="mt-10 space-y-6">
@@ -202,13 +205,12 @@ export default function ContactSection() {
 
 //               <div>
 //                 <p className="font-semibold">📧 Email</p>
-//                 <li>info.dkskranesng@gmail.com</li>
-             
+//                 <p>info.dkskranesng@gmail.com</p>
 //               </div>
 
 //               <div>
 //                 <p className="font-semibold">📞 Phone</p>
-//                 <li>+234 802 4983 235</li>
+//                 <p>+234 802 4983 235</p>
 //               </div>
 
 //               <div>
@@ -218,29 +220,50 @@ export default function ContactSection() {
 //             </div>
 //           </div>
 
-//           <form className="space-y-4 rounded-2xl bg-white p-8 shadow">
+//           <form
+//             onSubmit={handleSubmit}
+//             className="space-y-4 rounded-2xl bg-white p-8 shadow"
+//           >
 //             <div className="grid gap-4 md:grid-cols-2">
 //               <input
+//                 name="name"
 //                 type="text"
 //                 placeholder="Full Name"
+//                 value={formData.name}
+//                 onChange={handleChange}
+//                 required
 //                 className="rounded-lg border p-3"
 //               />
 
 //               <input
+//                 name="phone"
 //                 type="tel"
 //                 placeholder="Phone Number"
+//                 value={formData.phone}
+//                 onChange={handleChange}
+//                 required
 //                 className="rounded-lg border p-3"
 //               />
 //             </div>
 
 //             <input
+//               name="email"
 //               type="email"
 //               placeholder="Email Address"
+//               value={formData.email}
+//               onChange={handleChange}
+//               required
 //               className="w-full rounded-lg border p-3"
 //             />
 
-//             <select className="w-full rounded-lg border p-3">
-//               <option>Select a service...</option>
+//             <select
+//               name="service"
+//               value={formData.service}
+//               onChange={handleChange}
+//               required
+//               className="w-full rounded-lg border p-3"
+//             >
+//               <option value="">Select a service...</option>
 //               <option>General Contracts</option>
 //               <option>Investment Services</option>
 //               <option>General Merchandise</option>
@@ -253,16 +276,21 @@ export default function ContactSection() {
 //             </select>
 
 //             <textarea
+//               name="message"
 //               rows={5}
 //               placeholder="Tell us about your requirement..."
+//               value={formData.message}
+//               onChange={handleChange}
+//               required
 //               className="w-full rounded-lg border p-3"
 //             />
 
 //             <button
 //               type="submit"
-//               className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
+//               disabled={loading}
+//               className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
 //             >
-//               Send Enquiry
+//               {loading ? "Sending..." : "Send Enquiry"}
 //             </button>
 //           </form>
 //         </div>
