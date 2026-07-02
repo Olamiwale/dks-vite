@@ -2,7 +2,7 @@ import { services } from '../data/services';
 
 export default function ServicesSection() {
   return (
-    <section className="bg-white py-24">
+    <section id="services" className="scroll-mt-24 bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
 
         <div className="mb-12">

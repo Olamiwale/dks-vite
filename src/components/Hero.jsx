@@ -22,14 +22,13 @@ export default function Hero() {
 
           <div className="mt-8 flex gap-4">
             <a
-              href="/services"
-              className="rounded-md bg-red-900 px-6 py-3 text-white"
-            >
+              href="#services"
+              className="rounded-md bg-red-900 px-6 py-3 text-white" >
               Our Services
             </a>
 
             <a
-              href="/contact"
+              href="#contact"
               className="rounded-md border border-red-900 px-6 py-3 text-white"
             >
               Contact Us
